@@ -1,21 +1,22 @@
 {
-  "cli": {
-    "version": ">= 10.1.0"
-  },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
-    },
     "preview": {
-      "distribution": "internal"
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "preview2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "preview3": {
+      "developmentClient": true
     },
     "production": {}
   },
-  "submit": {
-    "production": {}
-  },
-"build": {
+  {
+  "build": {
     "production": {
       "android": {
         "image": "latest"
@@ -23,6 +24,9 @@
       "ios": {
         "image": "latest"
       }
+    }
+  }
 }
+
   }
 }
